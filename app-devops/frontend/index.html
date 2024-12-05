@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Eventos</h1>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2>Adicionar Evento</h2>
+            <form id="event-form">
+                <label for="name">Nome do Evento:</label>
+                <input type="text" id="name" placeholder="Digite o nome do evento" required>
+                
+                <label for="price">Preço do Ingresso:</label>
+                <input type="number" id="price" placeholder="Digite o preço do ingresso" step="0.01" required>
+                
+                <button type="submit">Salvar</button>
+            </form>
+        </section>
+
+        <section class="events-section">
+            <h2>Eventos</h2>
+            <input type="text" id="filter" placeholder="Buscar eventos..." />
+            <p id="empty-message" style="display: none;">Nenhum evento encontrado.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="events-list"></tbody>
+            </table>
+        </section>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
